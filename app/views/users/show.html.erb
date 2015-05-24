@@ -1,0 +1,11 @@
+<%= render partial: 'loggedin_nav' %>
+
+<h1><%= @user.username %> Notes</h1>
+
+<ul>
+  <% @user.notes do |notes| %>
+    <li>
+      <%= notes.message %>
+    </li>
+  <% end %>
+</ul>
